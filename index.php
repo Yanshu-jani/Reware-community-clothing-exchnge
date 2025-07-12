@@ -30,19 +30,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="background: url('assets/images/placeholder.jpg') center/cover no-repeat; color: white; padding: 70px 0 40px 0; position: relative;">
-        <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px;">
-            <div class="hero-content" style="flex: 1; min-width: 280px;">
-                <h1 style="font-size: 2.8rem; font-weight: bold; margin-bottom: 18px; line-height: 1.1;">Give Your Clothes a Second Life</h1>
-                <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.95;">Join our community clothing exchange platform. Swap, share, and reduce textile waste together.</p>
-                <div style="display: flex; gap: 18px; flex-wrap: wrap;">
-                    <a href="browse.php" class="btn-primary" style="font-size: 1.1rem;">Start Swapping</a>
-                    <a href="add-item.php" class="btn-secondary" style="font-size: 1.1rem;">List an Item</a>
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/images/hero-bg.jpg') center/cover no-repeat; color: white; padding: 120px 0 100px 0; position: relative; min-height: 600px;">
+        <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 50px; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="hero-content" style="flex: 1; min-width: 320px;">
+                <h1 style="font-size: 3.5rem; font-weight: bold; margin-bottom: 25px; line-height: 1.1; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Give Your Clothes a Second Life</h1>
+                <p style="font-size: 1.4rem; margin-bottom: 40px; opacity: 0.95; line-height: 1.6; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">Join our community clothing exchange platform. Swap, share, and reduce textile waste together while building a sustainable future.</p>
+                <div style="display: flex; gap: 25px; flex-wrap: wrap;">
+                    <a href="browse.php" class="btn-primary" style="font-size: 1.2rem; padding: 18px 35px; background: #27ae60; color: white; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(39,174,96,0.4); display: inline-block;">Start Swapping</a>
+                    <a href="add-item.php" class="btn-secondary" style="font-size: 1.2rem; padding: 18px 35px; background: transparent; color: white; text-decoration: none; border: 3px solid white; border-radius: 10px; font-weight: 600; transition: all 0.3s ease; display: inline-block;">List an Item</a>
                 </div>
             </div>
-            <div class="hero-image" style="flex: 1; min-width: 220px; text-align: center;">
-                <i class="fas fa-recycle" style="font-size: 7rem; color: rgba(255,255,255,0.85); margin-bottom: 10px;"></i>
-                <div style="font-size: 1.2rem; opacity: 0.8;">Sustainable Fashion</div>
+            <div class="hero-image" style="flex: 1; min-width: 280px; text-align: center;">
+                <i class="fas fa-recycle" style="font-size: 9rem; color: rgba(255,255,255,0.95); margin-bottom: 20px; text-shadow: 3px 3px 6px rgba(0,0,0,0.4);"></i>
+                <div style="font-size: 1.6rem; opacity: 0.9; font-weight: 600; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">Sustainable Fashion</div>
             </div>
         </div>
     </section>
@@ -72,72 +72,6 @@
         </div>
     </section>
 
-    <!-- Product Listings -->
-    <section class="featured" style="padding: 40px 0 60px 0; background: #f8f9fa;">
-        <div class="container">
-            <h2 style="text-align:center; color:#27ae60; margin-bottom: 30px;">Product Listings</h2>
-            <div class="items-grid" id="featured-items">
-                <?php
-                $demo_items = [
-                    [
-                        'icon' => 'fa-tshirt',
-                        'title' => 'Classic Denim Jacket',
-                        'desc' => 'Size M • Unisex',
-                        'points' => 20,
-                        'id' => 1
-                    ],
-                    [
-                        'icon' => 'fa-female',
-                        'title' => 'Red Summer Dress',
-                        'desc' => 'Size S • Women',
-                        'points' => 15,
-                        'id' => 2
-                    ],
-                    [
-                        'icon' => 'fa-child',
-                        'title' => "Boys' Hoodie",
-                        'desc' => 'Size L • Kids',
-                        'points' => 10,
-                        'id' => 3
-                    ],
-                    [
-                        'icon' => 'fa-shoe-prints',
-                        'title' => 'Running Shoes',
-                        'desc' => 'Size 9 • Men',
-                        'points' => 12,
-                        'id' => 4
-                    ]
-                ];
-                $colors = ['#183153','#f7a600','#217693','#1ccfc9'];
-                foreach ($demo_items as $i => $item):
-                    $color = $colors[$i%4];
-                ?>
-                <div class="infographic-card" style="margin:0;">
-                    <div class="infographic-sticky" style="background: <?php echo $color; ?>;">
-                        <i class="fas fa-paperclip infographic-clip"></i>
-                        <span class="infographic-number"><?php echo str_pad($i+1, 2, '0', STR_PAD_LEFT); ?></span>
-                    </div>
-                    <div class="infographic-image" style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;margin:32px auto 10px auto;background:#f6f8fa;border-radius:16px;border:2px solid #e0e4ea;box-shadow:0 2px 8px rgba(0,0,0,0.08);color:<?php echo $color; ?>;font-size:2.2rem;">
-                        <i class="fas <?php echo $item['icon']; ?>"></i>
-                    </div>
-                    <div class="infographic-content">
-                        <div class="infographic-title" style="color: <?php echo $color; ?>;">
-                            <?php echo htmlspecialchars($item['title']); ?>
-                        </div>
-                        <div class="infographic-desc">
-                            <?php echo htmlspecialchars($item['desc']); ?>
-                        </div>
-                        <span style="display:block; color:#222; font-weight:600; margin-bottom:8px;"> <?php echo $item['points']; ?> pts</span>
-                        <a href="item-details.php?id=<?php echo $item['id']; ?>" class="infographic-btn" style="background: <?php echo $color; ?>; margin-top:8px;"><i class="fas fa-eye"></i><span>View</span></a>
-                    </div>
-                    <div class="infographic-bar" style="background: <?php echo $color; ?>;"></div>
-                </div>
-                <?php endforeach; ?>
-                <!-- End example cards -->
-            </div>
-        </div>
-    </section>
-
     <!-- How It Works -->
     <section class="how-it-works">
         <div class="container">
@@ -158,6 +92,41 @@
                     <h3>3. Swap & Share</h3>
                     <p>Complete the exchange and give clothes a new home</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Listings -->
+    <section class="featured" style="padding: 40px 0 60px 0; background: #f8f9fa;">
+        <div class="container">
+            <h2 style="text-align:center; color:#27ae60; margin-bottom: 30px;">Product Listings</h2>
+            <div class="items-grid" id="featured-items">
+                <?php
+                $demo_items = [
+                    // All items removed
+                ];
+                $colors = ['#183153','#f7a600','#217693','#1ccfc9'];
+                foreach ($demo_items as $i => $item):
+                    $color = $colors[$i%4];
+                ?>
+                <div class="infographic-card" style="margin:0;">
+                    <div class="infographic-image" style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;margin:32px auto 10px auto;background:#f6f8fa;border-radius:16px;border:2px solid #e0e4ea;box-shadow:0 2px 8px rgba(0,0,0,0.08);color:<?php echo $color; ?>;font-size:2.2rem;">
+                        <i class="fas <?php echo $item['icon']; ?>"></i>
+                    </div>
+                    <div class="infographic-content">
+                        <div class="infographic-title" style="color: <?php echo $color; ?>;">
+                            <?php echo htmlspecialchars($item['title']); ?>
+                        </div>
+                        <div class="infographic-desc">
+                            <?php echo htmlspecialchars($item['desc']); ?>
+                        </div>
+                        <span style="display:block; color:#222; font-weight:600; margin-bottom:8px;"> <?php echo $item['points']; ?> pts</span>
+                        <a href="item-details.php?id=<?php echo $item['id']; ?>" class="infographic-btn" style="background: <?php echo $color; ?>; margin-top:8px;"><i class="fas fa-eye"></i><span>View</span></a>
+                    </div>
+                    <div class="infographic-bar" style="background: <?php echo $color; ?>;"></div>
+                </div> 
+                <?php endforeach; ?>
+                <!-- End example cards -->
             </div>
         </div>
     </section>
