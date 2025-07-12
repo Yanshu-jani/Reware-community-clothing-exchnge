@@ -60,6 +60,9 @@ $stmt = $db->prepare($query);
 $stmt->execute($params);
 $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+// Override the $items array so that it is always empty
+$items = [];
+
 // Get categories for filter
 $categories_query = "SELECT DISTINCT category FROM items WHERE category IS NOT NULL AND category != ''";
 $categories_stmt = $db->prepare($categories_query);

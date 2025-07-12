@@ -19,10 +19,7 @@ $stmt->execute([$user_id]);
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Get user's uploaded items
-$items_query = "SELECT * FROM items WHERE user_id = ? ORDER BY created_at DESC";
-$items_stmt = $db->prepare($items_query);
-$items_stmt->execute([$user_id]);
-$user_items = $items_stmt->fetchAll(PDO::FETCH_ASSOC);
+$user_items = [];
 
 // Get user's swap requests (as requester)
 $swaps_query = "SELECT s.*, i.title, i.image_path, u.username as item_owner 
@@ -442,9 +439,6 @@ $incoming_swaps = $incoming_stmt->fetchAll(PDO::FETCH_ASSOC);
                     
                     <a href="add-item.php" class="btn-primary" style="display: inline-block; margin-top: 20px;">
                         <i class="fas fa-plus"></i> Add New Item
-                    </a>
-                    <a href="add-test-items.php" class="btn-primary" style="display: inline-block; margin-top: 10px;">
-                        <i class="fas fa-flask"></i> Add Test Items
                     </a>
                 </div>
 
