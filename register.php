@@ -172,8 +172,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   background-image:
     repeating-linear-gradient(120deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 60px),
     repeating-linear-gradient(60deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 60px),
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 60px) !important;
-  background-size: 70px 120px !important;
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 60px),
+    linear-gradient(30deg, transparent 74%, rgba(255,255,255,0.05) 75%, rgba(255,255,255,0.05) 76%, transparent 77%),
+    linear-gradient(150deg, transparent 74%, rgba(255,255,255,0.05) 75%, rgba(255,255,255,0.05) 76%, transparent 77%);
+  background-size: 70px 120px, 70px 120px, 70px 120px, 40px 70px, 40px 70px !important;
+  background-position: 0 0, 0 0, 0 0, 0 0, 20px 35px;
 }
 </style>
 <body class="auth-bg">
